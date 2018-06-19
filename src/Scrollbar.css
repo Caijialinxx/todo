@@ -1,0 +1,16 @@
+.scrollWrapper {
+  display: none;
+  position: absolute;
+  right: 0;
+  height: 440px;
+  width: 4px;
+  background-color: #eee;
+}
+.scrollBar {
+  position: absolute;
+  top: 0%;
+  width: inherit;
+  height: 0px;
+  border-radius: 2px;
+  background-color: #2196F3;  
+}

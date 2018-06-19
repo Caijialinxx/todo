@@ -1,0 +1,33 @@
+.App {
+  max-width: 540px;
+  min-width: 360px;
+  margin: 0 auto;
+  box-shadow: 0 0 3px 1px #BDBDBD;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.todo-header {
+  background-color: #2196F3;
+  padding: 20px;
+  border-bottom: #BDBDBD;
+  color: white;
+}
+
+.todo-title {
+  margin: 60px 0 0 0;
+  font-size: 1.5em;
+}
+
+.todo-list {
+  color: #757575;
+  font-size: 28px;
+  font-weight: bold;
+  line-height: 418px;
+  text-align: center;
+  overflow-y: scroll;
+  margin-right: -17px;
+  max-height: 440px;
+}

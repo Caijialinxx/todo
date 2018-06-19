@@ -1,0 +1,23 @@
+.inputWrapper {
+  cursor: pointer;
+  border-top: 1px solid #BDBDBD;
+  padding-left: 16px;
+  display: flex;
+  align-items: center;
+}
+.inputWrapper label {
+  height: 100%;
+}
+.inputWrapper img {
+  cursor: pointer;
+  width: 18px;
+  padding: 16px 0;
+}
+.inputWrapper > input {
+  cursor: pointer;
+  padding: 16px;
+  outline: none;
+  border: none;
+  width: calc(100% - 16px);
+  font-size: 16px;
+}
