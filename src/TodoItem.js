@@ -18,22 +18,21 @@ class TodoItem extends Component {
     }
 
     return <li>
-        <div id='itemWrapper' className={this.props.todo.status} onClick={this.toggle.bind(this)}>
-          <img id='undone' src={icon_undone} alt='undone' />
-          <img id='done' src={icon_done} alt='done' />
-          <span>{this.props.todo.content}</span>
-        </div>
-        <div className='optionsWrapper'>
-          <img src={icon_top} alt='top' onClick={this.top.bind(this)} />
-          <img src={icon_up} alt='up' onClick={this.up.bind(this)} />
-          <img src={icon_down} alt='down' onClick={this.down.bind(this)} />
-          <img src={icon_bottom} alt='bottom' onClick={this.bottom.bind(this)} />
-          <img src={icon_delete} alt='delete' onClick={this.delete.bind(this)} />
-        </div>
+      <div id='itemWrapper' className={this.props.todo.status} onClick={this.toggle.bind(this)}>
+        <img src={statusImg} alt='done' />
+        <span>{this.props.todo.content}</span>
+      </div>
+      <div className='optionsWrapper'>
+        <img src={icon_top} alt='top' onClick={this.top.bind(this)} />
+        <img src={icon_up} alt='up' onClick={this.up.bind(this)} />
+        <img src={icon_down} alt='down' onClick={this.down.bind(this)} />
+        <img src={icon_bottom} alt='bottom' onClick={this.bottom.bind(this)} />
+        <img src={icon_delete} alt='delete' onClick={this.delete.bind(this)} />
+      </div>
     </li>
   }
   toggle(e) {
-    this.props.onToggle.call(undefined, e.currentTarget, { todo: this.props.todo, undone: icon_undone, done: icon_done });
+    this.props.onToggle.call(undefined, this.props.todo);
   }
   top(e) {
     this.props.onMove.call(undefined, e.currentTarget, 'toTop')

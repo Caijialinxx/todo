@@ -27,18 +27,6 @@ li #itemWrapper span {
   line-height: 20px;
   font-family: 'Comic Sans MS', 'Gill Sans MT', Verdana, 'Hiragino Sans GB', sans-serif;
 }
-li #itemWrapper.undone img#undone {
-  display: block;
-}
-li #itemWrapper.done img#undone {
-  display: none;
-}
-li #itemWrapper.undone img#done {
-  display: none;
-}
-li #itemWrapper.done img#done {
-  display: block;
-}
 li #itemWrapper.undone span {
   color: black;
   text-decoration: none;

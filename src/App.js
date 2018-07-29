@@ -129,21 +129,17 @@ class App extends Component {
       todoList: this.state.todoList
     })
   }
-  changeItemStatus(eventTarget, todoTarget) {
-    if (todoTarget.todo.status === 'undone') {
-      todoTarget.todo.status = 'done'
-      $(eventTarget.children[0])[0].src = todoTarget.done
-      $(eventTarget.children[1]).addClass('done')
+  changeItemStatus(todoTarget) {
+    if (todoTarget.status === 'undone') {
+      todoTarget.status = 'done'
     } else {
-      todoTarget.todo.status = 'undone'
-      $(eventTarget.children[0])[0].src = todoTarget.undone
-      $(eventTarget.children[1]).removeClass('done')
+      todoTarget.status = 'undone'
     }
-    this.setState(this.state)
+    this.setState(todoTarget)
   }
   deleteItem(todoTarget) {
     todoTarget.status = 'delete'
-    this.setState(this.state)
+    this.setState(todoTarget)
   }
   moveAction(eventTarget, action) {
     let currentElem = $(eventTarget).parents('li'),
